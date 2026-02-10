@@ -3,6 +3,10 @@ function startConfetti() {
   for(let i=0; i<100; i++){
     const confetti = document.createElement("div");
     confetti.classList.add("confetti");
+    confetti.style.position = "absolute";
+    confetti.style.width = "10px";
+    confetti.style.height = "10px";
+    confetti.style.borderRadius = "50%";
     confetti.style.left = Math.random()*window.innerWidth + "px";
     confetti.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
     document.body.appendChild(confetti);
